@@ -1,0 +1,107 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #EEEEEE;
+  font-family: 'Righteous', cursive;
+}
+
+header {
+  position: static;
+  top: 4vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 7vh;
+  width: 95vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .select-mode {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+header .select-mode svg {
+  cursor: pointer;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  height: 93vh;
+}
+
+main nav {
+  height: 100%;
+  position: relative;
+}
+
+main nav .nav-links {
+  position: absolute;
+  list-style: none;
+  bottom: 15vh;
+  left: 5vw;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+main nav .nav-link {
+  color: #252525;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 0.15rem;
+  font-size: 6rem;
+  cursor: pointer;
+}
+
+main #contact {
+  color: #2240E7;
+}
+
+main .da-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .da-me h1 {
+  -webkit-box-flex: 0.3;
+      -ms-flex: 0.3;
+          flex: 0.3;
+  font-weight: 100;
+}
+
+main .da-me #me {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 40vh;
+  max-height: 40vh;
+  border-radius: 50%;
+}
+/*# sourceMappingURL=main.css.map */
