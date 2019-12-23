@@ -224,33 +224,31 @@ main .home {
   position: relative;
 }
 
-main .boxing {
-  position: fixed;
-  left: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  z-index: 3;
-}
-
-main .boxing .summary {
-  position: fixed;
-  position: relative;
-  top: 60vh;
-  left: 5vw;
-}
-
 main svg {
-  position: fixed;
-  top: 90px;
-  right: -20vw;
+  position: relative;
+  top: 10px;
+  left: 20vw;
   margin-right: 25vw;
 }
 
 main svg circle:hover {
   fill: #E52B50;
+}
+
+main .boxing {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 3;
+  text-align: left;
+}
+
+main .boxing .summary {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  top: 70vh;
+  left: 200px;
 }
 /*# sourceMappingURL=main.css.map */
