@@ -44,7 +44,7 @@ darkMode.addEventListener('click', () => {
     .add({
       targets: ['.bar'],
       backgroundColor: !toggle ? "#EEEEEE" : "#252525"
-    }, "-=700")
+    }, "-=1400")
 
   //Everytime we click on the sun we want toggle to switch between true and false
   if (!toggle) {
