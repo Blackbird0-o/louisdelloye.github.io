@@ -7,15 +7,24 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Louis Delloye</title>
   <link rel="stylesheet" href="css/main.css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap&subset=latin-ext" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet"> -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap&subset=latin-ext" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header>
-    <div class="social">
-      <!-- ! Insert SVG of fb, insta, git& -->
+    <div class="hamburger">
+      <!-- TODO Insert hamburger menu -->
+      <nav>
+        <ul class="nav-links">
+          <li><a id="bout-me" class="nav-link" href="#">ABOUT ME</a></li>
+          <li><a id="project" class="nav-link" href="#">PROJECTS</a></li>
+          <li><a id="contact" class="nav-link" href="#">CONTACT</a></li>
+        </ul>
+      </nav>
     </div>
+
     <div class="select-mode">
       <svg id="darkMode" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path class="sun"
@@ -26,19 +35,43 @@
   </header>
 
   <main>
-    <nav>
-      <ul class="nav-links">
-        <li><a id="bout-me" class="nav-link" href="#">ABOUT ME</a></li>
-        <li><a id="project" class="nav-link" href="#">PROJECTS</a></li>
-        <li><a id="contact" class="nav-link" href="#">CONTACT</a></li>
-      </ul>
-    </nav>
+    <div class="home">
+      <div class="summary">
+        <h4>Hi,</h4>
+        <h1>I'm Louis</h1>
+        <p>First year Physics Master student, also passionate about photography and UI/UX</p>
+      </div>
 
-    <div class="da-me">
-      <img id='me' src="img/E03A4293.jpg">
-      <h1>I'm Louis</h1>
+      <svg width="962" height="947" viewBox="0 0 962 947" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="397.5" cy="63.5" r="63.5" fill="#FFF500" />
+        <circle cx="564.5" cy="63.5" r="63.5" fill="#00C2FF" />
+        <circle cx="731.5" cy="63.5" r="63.5" fill="#FFF500" />
+        <circle cx="898.5" cy="63.5" r="63.5" fill="#3DEE4F" />
+        <circle cx="397.5" cy="227.5" r="63.5" fill="#00C2FF" />
+        <circle cx="564.5" cy="227.5" r="63.5" fill="#3DEE4F" />
+        <circle cx="63.5" cy="227.5" r="63.5" fill="#00C2FF" />
+        <circle cx="230.5" cy="227.5" r="63.5" fill="#3DEE4F" />
+        <circle cx="731.5" cy="227.5" r="63.5" fill="#FFF500" />
+        <circle cx="898.5" cy="227.5" r="63.5" fill="#00C2FF" />
+        <circle cx="898.5" cy="391.5" r="63.5" fill="#3DEE4F" />
+        <circle cx="898.5" cy="555.5" r="63.5" fill="#00C2FF" />
+        <circle cx="731.5" cy="555.5" r="63.5" fill="#FFF500" />
+        <circle cx="731.5" cy="391.5" r="63.5" fill="#00C2FF" />
+        <circle cx="898.5" cy="883.5" r="63.5" fill="#3DEE4F" />
+        <circle cx="898.5" cy="719.5" r="63.5" fill="#FFF500" />
+      </svg>
+    </div>
+
+    <div class="projects">
+      <!-- TODO Add iamge and description for tapioca toys and IA -->
+      <div class="tapioca-toys"></div>
+      <div class="IA-exoplanet"></div>
     </div>
   </main>
+
+  <footer>
+    <!-- TODO Add github and linkedin  -->
+  </footer>
 
   <script src="app.js"></script>
   <script src="anime.min.js"></script>

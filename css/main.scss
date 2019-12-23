@@ -16,53 +16,38 @@ $colors: (primary: #EEEEEE,
 
 body {
   background-color: map-get($colors, primary);
-  font-family: 'Righteous', cursive;
+  font-family: 'Open Sans', sans-serif;
   //font-family: 'Nunito';
 }
 
 header {
-  position: static;
+  position: relative;
   top: 4vh;
+  //background-color: #2240E7;
 
   display: flex;
   height: 7vh;
   width: 95vw;
-  //margin: auto;
+  margin: auto;
   align-items: center;
   //margin-bottom: 10vh;
-
-  .select-mode {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-
-    svg {
-      cursor: pointer;
-    }
-  }
-}
-
-
-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  //background-color: rgb(239, 16, 83);
-  height: 93vh;
 
 
   // * NAV
   nav {
     //background-color: #10BAEF;
+    display: none;
     height: 100%;
     position: relative;
 
     .nav-links {
+
       position: absolute;
       list-style: none;
       bottom: 15vh;
       left: 5vw;
       //transform: translate(-95vw -85vh);
-      transform: rotate(-45deg);
+      //transform: rotate(-90deg);
 
 
     }
@@ -76,32 +61,76 @@ main {
       cursor: pointer;
     }
 
+    #contact {
+      color: map-get($map: $colors, $key: best_blue);
+    }
   }
 
-  #contact {
-    color: map-get($map: $colors, $key: best_blue);
-  }
 
-
-  // * ME
-  .da-me {
-    //background-color: rgb(16, 239, 27);
+  //* DARK MODE
+  .select-mode {
+    //top: 10vh;
+    flex: 1;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: flex-start;
 
-    h1 {
-      flex: 0.3;
-      font-weight: 100;
+    svg {
+      cursor: pointer;
     }
+  }
+}
 
-    #me {
-      flex: 1;
-      width: 40vh;
-      max-height: 40vh;
-      border-radius: 50%;
-      //box-shadow: 20px -20px 70px 0px rgba(0, 0, 0, 0.15); //offset x, y, blur, size, color
+
+main {
+  display: flex;
+  justify-content: flex-end;
+  //background-color: rgb(239, 16, 83);
+  height: 93vh;
+
+  h1 {
+    font-weight: 200;
+    font-size: 5rem;
+  }
+
+  h4,
+  p {
+    padding-left: 0.45rem;
+    font-weight: 700;
+  }
+
+  h4 {
+    transform: translate(0, 1rem);
+  }
+
+  .home {
+    position: relative;
+    //display: flex;
+    //background-color: red;
+
+  }
+
+  svg {
+    //background-color: rgb(16, 239, 16);
+    position: relative;
+    top: 10px;
+    left: 20vw;
+    //right: 10vw;
+    //max-height: 80vh;
+    margin-right: 25vw;
+    //transform: translate(-50%, -50%)
+
+    circle:hover {
+      fill: #E52B50;
     }
+  }
+
+  .summary {
+    position: fixed;
+    //background-color: rgb(239, 16, 83);
+    position: relative;
+    top: 60vh;
+    left: 5vw;
+    z-index: 3;
+    //transform: translate(0, -120vh)
   }
 }

@@ -30,7 +30,7 @@ darkMode.addEventListener('click', () => {
       backgroundColor: toggle ? "#EEEEEE" : "#252525"
     }, "-= 700")
     .add({
-      targets: "h1",
+      targets: ['h1', 'h4', 'p'],
       color: toggle ? "#000000" : "#FFFFFF"
     }, "-=700")
     .add({
