@@ -21,8 +21,8 @@ body {
 }
 
 header {
-  position: relative;
-  top: 4vh;
+  position: fixed;
+  top: 17px;
   z-index: 10; //so that the nav menu appears above the main
   //background-color: #2240E7;
 
@@ -30,8 +30,6 @@ header {
   height: 7vh;
   width: 95vw;
   margin: auto;
-  align-items: center;
-  //margin-bottom: 10vh;
 
   // * HAMBURGER
   .menu-wrapper {
@@ -41,6 +39,8 @@ header {
     width: 50px;
     height: 50px;
     box-sizing: border-box;
+    align-items: center;
+    //background-color: red;
 
     .toggle {
       position: absolute;
@@ -104,7 +104,6 @@ header {
 
     .toggle:hover+.hamburger {
       transform: rotate(-25deg);
-      //background: rgba(255, 255, 255, 0.1);
       border-radius: 50%;
     }
 
@@ -141,24 +140,6 @@ header {
     align-content: center;
   }
 
-  /*
-  nav ul li {
-    color: #F3F3F3;
-    font-size: 20px;
-    list-style-type: none;
-    text-align: center;
-    margin: 0;
-    cursor: pointer;
-    box-sizing: 15px;
-    border-bottom: 2px solid transparent;
-  }
-  
-  nav ul li:hover {
-    color: #FFCE00;
-    border-bottom: 2px solid #FFCE00;
-  }
-  */
-
   .menu-wrapper .toggle:checked+.hamburger+nav {
     opacity: 1;
     width: 100vw;
@@ -168,8 +149,6 @@ header {
 
   // * NAV
   nav {
-    //background-color: #10BAEF;
-    //display: none;
     height: 100%;
     position: relative;
     z-index: 997;
@@ -180,10 +159,6 @@ header {
       list-style: none;
       bottom: 15vh;
       left: 5vw;
-      //transform: translate(-95vw -85vh);
-      //transform: rotate(-90deg);
-
-
     }
 
     .nav-link {
@@ -205,9 +180,9 @@ header {
 
   //* DARK MODE
   .select-mode {
-    //top: 10vh;
+    position: fixed;
+    right: 17px;
     flex: 1;
-    //display: none;
     display: flex;
     justify-content: flex-end;
 
@@ -248,11 +223,29 @@ main {
 
   }
 
+  .boxing {
+    position: fixed;
+    left: 20px;
+    display: flex;
+    justify-content: flex-start;
+    z-index: 3;
+
+    .summary {
+      position: fixed;
+      position: relative;
+      top: 60vh;
+      left: 5vw;
+
+      //transform: translate(0, -120vh)
+    }
+  }
+
   svg {
     //background-color: rgb(16, 239, 16);
-    position: relative;
-    top: 10px;
-    left: 20vw;
+    position: fixed;
+    top: 90px;
+    //left: 10vw;
+    right: -20vw;
     //right: 10vw;
     //max-height: 120vh;
     //max-width: 80vw;
@@ -262,22 +255,7 @@ main {
       fill: #E52B50;
     }
   }
-
-  .boxing {
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-
-    .summary {
-      position: fixed;
-      position: relative;
-      top: 60vh;
-      left: 5vw;
-      z-index: 3;
-      //transform: translate(0, -120vh)
-    }
-  }
-
 }
 
 // TODO Add media queries for table phone and smaller (width and size !) computer screen
+// TODO Fix hover properties broken when using on mobile

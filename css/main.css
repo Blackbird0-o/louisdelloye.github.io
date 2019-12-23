@@ -11,8 +11,8 @@ body {
 }
 
 header {
-  position: relative;
-  top: 4vh;
+  position: fixed;
+  top: 17px;
   z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20,26 +20,6 @@ header {
   height: 7vh;
   width: 95vw;
   margin: auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  /*
-  nav ul li {
-    color: #F3F3F3;
-    font-size: 20px;
-    list-style-type: none;
-    text-align: center;
-    margin: 0;
-    cursor: pointer;
-    box-sizing: 15px;
-    border-bottom: 2px solid transparent;
-  }
-  
-  nav ul li:hover {
-    color: #FFCE00;
-    border-bottom: 2px solid #FFCE00;
-  }
-  */
 }
 
 header .menu-wrapper {
@@ -50,6 +30,9 @@ header .menu-wrapper {
   height: 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header .menu-wrapper .toggle {
@@ -193,6 +176,8 @@ header nav #contact {
 }
 
 header .select-mode {
+  position: fixed;
+  right: 17px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -239,25 +224,16 @@ main .home {
   position: relative;
 }
 
-main svg {
-  position: relative;
-  top: 10px;
-  left: 20vw;
-  margin-right: 25vw;
-}
-
-main svg circle:hover {
-  fill: #E52B50;
-}
-
 main .boxing {
-  position: relative;
+  position: fixed;
+  left: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  z-index: 3;
 }
 
 main .boxing .summary {
@@ -265,6 +241,16 @@ main .boxing .summary {
   position: relative;
   top: 60vh;
   left: 5vw;
-  z-index: 3;
+}
+
+main svg {
+  position: fixed;
+  top: 90px;
+  right: -20vw;
+  margin-right: 25vw;
+}
+
+main svg circle:hover {
+  fill: #E52B50;
 }
 /*# sourceMappingURL=main.css.map */
