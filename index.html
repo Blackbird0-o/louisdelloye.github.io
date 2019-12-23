@@ -10,21 +10,11 @@
   <!-- <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet"> -->
   <!-- <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap&subset=latin-ext" rel="stylesheet"> -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" fill="#E52B50" href="img/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
   <header>
-    <div class="hamburger">
-      <!-- TODO Insert hamburger menu -->
-      <nav>
-        <ul class="nav-links">
-          <li><a id="bout-me" class="nav-link" href="#">ABOUT ME</a></li>
-          <li><a id="project" class="nav-link" href="#">PROJECTS</a></li>
-          <li><a id="contact" class="nav-link" href="#">CONTACT</a></li>
-        </ul>
-      </nav>
-    </div>
 
     <div class="select-mode">
       <svg id="darkMode" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,14 +23,36 @@
           fill="#FFD12F" />
       </svg>
     </div>
+
+    <div class="menu-wrapper">
+      <input type="checkbox" class="toggle" />
+
+      <div class="hamburger">
+        <!-- TODO Insert hamburger menu -->
+        <!-- <div class="bar-before"></div>
+        <div class="bar"></div>
+        <div class="bar-after"></div> -->
+        <div class="bar"></div>
+      </div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a id="bout-me" class="nav-link" href="#"> <span>01</span> ABOUT ME</a></li>
+          <li><a id="project" class="nav-link" href="#"><span>02</span> PROJECTS</a></li>
+          <li><a id="contact" class="nav-link" href="#"><span>03</span> CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
     <div class="home">
-      <div class="summary">
-        <h4>Hi,</h4>
-        <h1>I'm Louis</h1>
-        <p>First year Physics Master student, also passionate about photography and UI/UX</p>
+      <div class="boxing">
+        <div class="summary">
+          <h4>Hi,</h4>
+          <h1>I'm Louis</h1>
+          <p>First year Physics Master student, also passionate about photography and UI/UX</p>
+        </div>
       </div>
 
       <svg width="962" height="947" viewBox="0 0 962 947" xmlns="http://www.w3.org/2000/svg">

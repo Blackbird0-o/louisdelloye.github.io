@@ -26,7 +26,7 @@ darkMode.addEventListener('click', () => {
       rotate: toggle ? 0 : 320
     }, '-= 350')
     .add({
-      targets: "body",
+      targets: ["body", "nav"],
       backgroundColor: toggle ? "#EEEEEE" : "#252525"
     }, "-= 700")
     .add({
@@ -40,6 +40,10 @@ darkMode.addEventListener('click', () => {
     .add({
       targets: "#contact",
       color: toggle ? "#2240E7" : "#FFD12F"
+    }, "-=700")
+    .add({
+      targets: ['.bar'],
+      backgroundColor: !toggle ? "#EEEEEE" : "#252525"
     }, "-=700")
 
   //Everytime we click on the sun we want toggle to switch between true and false

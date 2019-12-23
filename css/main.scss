@@ -23,6 +23,7 @@ body {
 header {
   position: relative;
   top: 4vh;
+  z-index: 10; //so that the nav menu appears above the main
   //background-color: #2240E7;
 
   display: flex;
@@ -32,13 +33,146 @@ header {
   align-items: center;
   //margin-bottom: 10vh;
 
+  // * HAMBURGER
+  .menu-wrapper {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+
+    .toggle {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      z-index: 999;
+      cursor: pointer;
+      opacity: 0;
+    }
+
+    .hamburger {
+      width: 50px;
+      height: 50px;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      z-index: 998;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      box-sizing: border-box;
+      padding: 10px;
+      transition: all 0.3s ease;
+
+      .bar {
+        position: relative;
+        width: 100%;
+        height: 3px;
+        background: map-get($map: $colors, $key: secondary);
+        z-index: 5;
+        transition: all 0.2s linear;
+      }
+
+      .bar::before,
+      .bar::after {
+        content: '';
+        position: absolute;
+        top: -10px;
+        width: 100%;
+        height: 3px;
+        background: inherit;
+        transition: all 0.2s linear;
+      }
+
+      .bar::after {
+        top: 10px;
+      }
+    }
+
+
+    .toggle:hover+.hamburger {
+      transform: rotate(-25deg);
+      //background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+    }
+
+    .toggle:checked+.hamburger {
+      transform: rotate(45deg);
+    }
+
+    .toggle:checked:hover+.hamburger {
+      transform: rotate(135deg);
+    }
+
+    .toggle:checked+.hamburger .bar::before,
+    .toggle:checked+.hamburger .bar::after {
+      top: 0;
+      transform: rotate(90deg);
+    }
+  }
+
+
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    background-color: map-get($map: $colors, $key: primary);
+    transition: opacity 0.3s ease, top 0.3s ease, left, width 0.1s ease, height 0.25s ease;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  /*
+  nav ul li {
+    color: #F3F3F3;
+    font-size: 20px;
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    cursor: pointer;
+    box-sizing: 15px;
+    border-bottom: 2px solid transparent;
+  }
+  
+  nav ul li:hover {
+    color: #FFCE00;
+    border-bottom: 2px solid #FFCE00;
+  }
+  */
+
+  .menu-wrapper .toggle:checked+.hamburger+nav {
+    opacity: 1;
+    width: 100vw;
+    height: 100vh;
+  }
+
 
   // * NAV
   nav {
     //background-color: #10BAEF;
-    display: none;
+    //display: none;
     height: 100%;
     position: relative;
+    z-index: 997;
 
     .nav-links {
 
@@ -57,7 +191,7 @@ header {
       text-decoration: none;
       font-weight: 800;
       letter-spacing: 0.15rem;
-      font-size: 6rem; //! mediaQ
+      font-size: 6rem; // TODO mediaQ
       cursor: pointer;
     }
 
@@ -67,15 +201,20 @@ header {
   }
 
 
+
+
   //* DARK MODE
   .select-mode {
     //top: 10vh;
     flex: 1;
+    //display: none;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
+
 
     svg {
       cursor: pointer;
+      z-index: 1000;
     }
   }
 }
@@ -115,22 +254,30 @@ main {
     top: 10px;
     left: 20vw;
     //right: 10vw;
-    //max-height: 80vh;
+    //max-height: 120vh;
+    //max-width: 80vw;
     margin-right: 25vw;
-    //transform: translate(-50%, -50%)
 
     circle:hover {
       fill: #E52B50;
     }
   }
 
-  .summary {
-    position: fixed;
-    //background-color: rgb(239, 16, 83);
+  .boxing {
     position: relative;
-    top: 60vh;
-    left: 5vw;
-    z-index: 3;
-    //transform: translate(0, -120vh)
+    display: flex;
+    justify-content: flex-start;
+
+    .summary {
+      position: fixed;
+      position: relative;
+      top: 60vh;
+      left: 5vw;
+      z-index: 3;
+      //transform: translate(0, -120vh)
+    }
   }
+
 }
+
+// TODO Add media queries for table phone and smaller (width and size !) computer screen
