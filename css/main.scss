@@ -7,6 +7,8 @@ $colors: (primary: #EEEEEE,
   accent_ro: #E52B50,
 );
 
+$margins: (svg_projects_bg : 400px);
+
 //CSS
 * {
   margin: 0%;
@@ -200,9 +202,6 @@ header {
 main {
   display: flex;
   flex-direction: column;
-  //justify-content: flex-end;
-  //background-color: rgb(239, 16, 83);
-
 
   h1 {
     font-weight: 200;
@@ -222,17 +221,10 @@ main {
   .home {
     flex: 2;
     position: relative;
-    display: flex;
-    justify-content: flex-end;
-    //height: 110vh;
-    //display: flex;
-    //background-color: violet;
 
     svg {
       position: relative;
-      top: 10px;
       left: 20vw;
-      margin-right: 25vw;
 
       circle:hover {
         fill: #E52B50;
@@ -241,18 +233,15 @@ main {
 
     .boxing {
       position: relative;
-      //background-color: red;
       box-sizing: border-box;
-      z-index: 3;
       text-align: left;
 
       .summary {
-        //background-color: blue;
+        z-index: 3;
         width: fit-content;
         position: relative;
         top: 70vh;
         left: 200px;
-        //text-align: left;
       }
     }
   }
@@ -267,16 +256,17 @@ main {
     .back-ground {
       display: flex;
       flex-direction: column;
-      //justify-content: flex-end;
 
       .left {
         display: flex;
         justify-content: flex-start;
+        margin-bottom: map-get($margins, svg_projects_bg);
       }
 
       .right {
         display: flex;
         justify-content: flex-end;
+        margin-bottom: map-get($margins, svg_projects_bg);
       }
     }
   }
