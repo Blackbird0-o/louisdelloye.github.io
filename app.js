@@ -53,3 +53,6 @@ darkMode.addEventListener('click', () => {
     toggle = false;
   }
 });
+
+// TODO : Add scroll parallax animations
+// TODO : Add scroll change to right part when click in menu
