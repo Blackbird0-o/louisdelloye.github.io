@@ -8,7 +8,6 @@ let toggle = false;
 darkMode.addEventListener('click', () => {
   //We need to use anime.js
   //Here we set up the timeline
-  console.log(darkMode.style.backgroundColor);
   const timeline = anime.timeline({
     duration: 750,
     easing: "easeOutExpo"
@@ -30,8 +29,12 @@ darkMode.addEventListener('click', () => {
       backgroundColor: toggle ? "#EEEEEE" : "#252525"
     }, "-= 700")
     .add({
-      targets: ['h1', 'h4', 'p'],
-      color: toggle ? "#000000" : "#FFFFFF"
+      targets: "footer",
+      backgroundColor: toggle ? "#F8F8F8" : "#1f1f1f"
+    }, "-= 700")
+    .add({
+      targets: ['h1', 'h4', 'h3', 'p'],
+      color: toggle ? "#252525" : "#EEEEEE"
     }, "-=700")
     .add({
       targets: ".nav-link",
@@ -42,7 +45,11 @@ darkMode.addEventListener('click', () => {
       color: toggle ? "#2240E7" : "#FFD12F"
     }, "-=700")
     .add({
-      targets: ['.bar'],
+      targets: ".profile-svg",
+      filter: toggle ? "invert(100%) sepia(30%) saturate(3198%) hue-rotate(335deg) brightness(153%) contrast(85%)" : "invert(0%)"
+    }, "-=700")
+    .add({
+      targets: '.bar',
       backgroundColor: !toggle ? "#EEEEEE" : "#252525"
     }, "-=1400")
 

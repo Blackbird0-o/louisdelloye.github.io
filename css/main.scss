@@ -1,13 +1,17 @@
 //Variables
 $colors: (primary: #EEEEEE,
   secondary: #252525,
+  footer_accent: #F8F8F8,
+  footer_accent_dark: #1f1f1f,
   best_blue: #2240E7,
   accent_bl: #10BAEF,
   accent_or: #FFD12F,
   accent_ro: #E52B50,
 );
 
-$margins: (svg_projects_bg : 400px);
+$margins: (svg_projects_bg : 400px,
+  icons: 5px,
+  footer_padding: 10px);
 
 //CSS
 * {
@@ -268,6 +272,26 @@ main {
         justify-content: flex-end;
         margin-bottom: map-get($margins, svg_projects_bg);
       }
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  padding: map-get($map: $margins, $key: footer_padding);
+  background-color: map-get($map: $colors, $key: footer_accent);
+
+  h3 {
+    margin-bottom: 10px;
+  }
+
+  .profile-links {
+    display: flex;
+    justify-content: center;
+
+    .profile-svg {
+      filter: invert(100%) sepia(30%) saturate(3198%) hue-rotate(335deg) brightness(153%) contrast(85%);
+      margin: map-get($map: $margins, $key: icons)
     }
   }
 }

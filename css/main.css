@@ -294,4 +294,29 @@ main .projects .back-ground .right {
           justify-content: flex-end;
   margin-bottom: 400px;
 }
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #F8F8F8;
+}
+
+footer h3 {
+  margin-bottom: 10px;
+}
+
+footer .profile-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .profile-links .profile-svg {
+  -webkit-filter: invert(100%) sepia(30%) saturate(3198%) hue-rotate(335deg) brightness(153%) contrast(85%);
+          filter: invert(100%) sepia(30%) saturate(3198%) hue-rotate(335deg) brightness(153%) contrast(85%);
+  margin: 5px;
+}
 /*# sourceMappingURL=main.css.map */
