@@ -306,6 +306,7 @@ main .projects .back-ground .right {
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin-bottom: 400px;
+  margin-top: 400px;
 }
 
 footer {

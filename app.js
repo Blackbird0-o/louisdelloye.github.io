@@ -15,11 +15,13 @@ darkMode.addEventListener('click', () => {
 
   //Add different animations to the timeline
   timeline.add({
+      //Morph the sun into the moon and vice versa
       targets: ".sun",
       d: [{
         value: toggle ? sunPath : moonPath
       }]
     })
+    // Invert text, backgrounds etc.
     .add({
       targets: '#darkMode',
       rotate: toggle ? 0 : 320
@@ -60,6 +62,3 @@ darkMode.addEventListener('click', () => {
     toggle = false;
   }
 });
-
-// TODO : Add scroll parallax animations
-// TODO : Add scroll change to right part when click in menu

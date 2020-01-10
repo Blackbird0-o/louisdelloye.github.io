@@ -23,7 +23,6 @@ $margins: (svg_projects_bg : 400px,
 body {
   background-color: map-get($colors, primary);
   font-family: 'Open Sans', sans-serif;
-  //font-family: 'Nunito';
 }
 
 header {
@@ -281,6 +280,7 @@ main {
         display: flex;
         justify-content: flex-end;
         margin-bottom: map-get($margins, svg_projects_bg);
+        margin-top: map-get($margins, svg_projects_bg);
       }
     }
   }
