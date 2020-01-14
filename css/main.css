@@ -137,8 +137,8 @@ header .menu-wrapper .toggle:checked + .hamburger .bar::after {
 
 header nav {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: -15px;
+  left: -15px;
   width: 0;
   height: 0;
   opacity: 0;
@@ -220,6 +220,7 @@ main {
 main h1 {
   font-weight: 200;
   font-size: 5rem;
+  color: #2240E7;
 }
 
 main h4,
@@ -231,6 +232,23 @@ main p {
 main h4 {
   -webkit-transform: translate(0, 1rem);
           transform: translate(0, 1rem);
+}
+
+main .to-the-top #myBtnL,
+main .to-the-top #myBtnD {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+main .dark-button {
+  opacity: 0;
 }
 
 main .home {
@@ -290,8 +308,6 @@ main .projects .content {
           align-items: center;
   text-align: justify;
   position: relative;
-  -webkit-transform: translateY(-1700px);
-          transform: translateY(-1700px);
   margin-left: 20vw;
   margin-right: 20vw;
   margin-top: 130px;
@@ -337,6 +353,7 @@ main .projects .back-ground {
           flex-direction: column;
   position: relative;
   z-index: -10;
+  max-height: 0px;
 }
 
 main .projects .back-ground .left {

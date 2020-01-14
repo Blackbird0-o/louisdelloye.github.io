@@ -35,7 +35,11 @@ darkMode.addEventListener('click', () => {
       backgroundColor: toggle ? "#F8F8F8" : "#1f1f1f"
     }, "-= 700")
     .add({
-      targets: ['h1', 'h4', 'h3', 'p'],
+      targets: 'h1',
+      color: toggle ? "#2240E7" : "#E52B50"
+    }, "-=700")
+    .add({
+      targets: ['h4', 'h3', 'p'],
       color: toggle ? "#252525" : "#EEEEEE"
     }, "-=700")
     .add({
@@ -44,11 +48,19 @@ darkMode.addEventListener('click', () => {
     }, "-=700")
     .add({
       targets: "#contact",
-      color: toggle ? "#2240E7" : "#FFD12F"
+      color: toggle ? "#2240E7" : "#E52B50"
     }, "-=700")
     .add({
       targets: ".profile-svg",
       filter: toggle ? "invert(100%) sepia(30%) saturate(3198%) hue-rotate(335deg) brightness(153%) contrast(85%)" : "invert(0%)"
+    }, "-=1500")
+    .add({
+      targets: ".dark-button",
+      opacity: toggle ? 0 : 1
+    }, "-=1500")
+    .add({
+      targets: ".light-button",
+      display: toggle ? 1 : 0
     }, "-=700")
     .add({
       targets: '.bar',

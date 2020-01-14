@@ -131,8 +131,8 @@ header {
 
   nav {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: -15px;
+    left: -15px;
 
     width: 0;
     height: 0;
@@ -207,6 +207,7 @@ main {
   h1 {
     font-weight: 200;
     font-size: 5rem;
+    color: map-get($map: $colors, $key: best_blue);
   }
 
   h4,
@@ -217,6 +218,26 @@ main {
 
   h4 {
     transform: translate(0, 1rem);
+  }
+
+  .to-the-top {
+
+    #myBtnL,
+    #myBtnD {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 99;
+      border: none;
+      outline: none;
+      background: none;
+      cursor: pointer;
+    }
+  }
+
+  .dark-button {
+    opacity: 0;
   }
 
   .home {
@@ -261,7 +282,6 @@ main {
       align-items: center;
       text-align: justify;
       position: relative;
-      transform: translateY(-1700px); // ! IMPROVE THIS it's dirty
       margin-left: map-get($map: $margins, $key: descriptions_box_sides);
       margin-right: map-get($map: $margins, $key: descriptions_box_sides);
       margin-top: map-get($map: $margins, $key: descriptions_box_top_bottom);
@@ -299,6 +319,7 @@ main {
       flex-direction: column;
       position: relative;
       z-index: -10;
+      max-height: 0px;
       //top: -150vh;
 
       .left {
