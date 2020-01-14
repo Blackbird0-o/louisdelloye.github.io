@@ -273,9 +273,58 @@ main .about {
 }
 
 main .projects {
+  position: relative;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+main .projects .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: justify;
+  position: relative;
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+  margin-left: 20vw;
+  margin-right: 20vw;
+  margin-top: 130px;
+  margin-bottom: 130px;
+}
+
+main .projects .content .preview {
+  -webkit-box-flex: 0.2;
+      -ms-flex: 0.2;
+          flex: 0.2;
+}
+
+main .projects .content .preview .img-cropper {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  border: 3px solid white;
+}
+
+main .projects .content .preview .img-cropper img {
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+
+main .projects .content .descr {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  margin: 20px;
 }
 
 main .projects .back-ground {
@@ -286,6 +335,9 @@ main .projects .back-ground {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
+  z-index: -10;
+  top: -150vh;
 }
 
 main .projects .back-ground .left {
@@ -295,7 +347,7 @@ main .projects .back-ground .left {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin-bottom: 400px;
+  margin-bottom: 100px;
 }
 
 main .projects .back-ground .right {
@@ -305,8 +357,8 @@ main .projects .back-ground .right {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin-bottom: 400px;
-  margin-top: 400px;
+  margin-bottom: 100px;
+  margin-top: 100px;
 }
 
 footer {

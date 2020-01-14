@@ -1,17 +1,5 @@
 //Variables
-$colors: (primary: #EEEEEE,
-  secondary: #252525,
-  footer_accent: #F8F8F8,
-  footer_accent_dark: #1f1f1f,
-  best_blue: #2240E7,
-  accent_bl: #10BAEF,
-  accent_or: #FFD12F,
-  accent_ro: #E52B50,
-);
-
-$margins: (svg_projects_bg : 400px,
-  icons: 5px,
-  footer_padding: 10px);
+@import 'variables';
 
 //CSS
 * {
@@ -264,11 +252,54 @@ main {
   }
 
   .projects {
+    position: relative;
     flex: 1;
+
+    .content {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      text-align: justify;
+      position: relative;
+      transform: translateY(-100px);
+      margin-left: map-get($map: $margins, $key: descriptions_box_sides);
+      margin-right: map-get($map: $margins, $key: descriptions_box_sides);
+      margin-top: map-get($map: $margins, $key: descriptions_box_top_bottom);
+      margin-bottom: map-get($map: $margins, $key: descriptions_box_top_bottom);
+
+      .preview {
+        flex: 0.2;
+
+        .img-cropper {
+          width: 250px;
+          height: 250px;
+          position: relative;
+          overflow: hidden;
+          border-radius: 15px;
+          border: 3px solid white;
+
+          img {
+            margin: 0 auto;
+            height: 100%;
+            width: auto;
+          }
+        }
+      }
+
+      .descr {
+        flex: 1;
+        position: relative;
+        margin: map-get($map: $margins, $key: descr);
+
+      }
+    }
 
     .back-ground {
       display: flex;
       flex-direction: column;
+      position: relative;
+      z-index: -10;
+      top: -150vh;
 
       .left {
         display: flex;

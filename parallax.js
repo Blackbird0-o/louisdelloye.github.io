@@ -7,9 +7,9 @@ function parallax(element, distance, speed) {
 
 // Vary speed based on scroll
 window.addEventListener('scroll', function () {
-  parallax('#green', window.scrollY, 0.2);
-  parallax('#blue', window.scrollY, -0.3);
-  parallax('#yellow', window.scrollY, -0.1);
+  parallax('#green', window.scrollY, -0.3);
+  parallax('#blue', window.scrollY, -0.2);
+  //parallax('#yellow', window.scrollY, -0.1);
 });
 
 // TODO : Add scroll change to right part when click in menu
