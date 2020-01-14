@@ -261,7 +261,7 @@ main {
       align-items: center;
       text-align: justify;
       position: relative;
-      transform: translateY(-100px);
+      transform: translateY(-1700px); // ! IMPROVE THIS it's dirty
       margin-left: map-get($map: $margins, $key: descriptions_box_sides);
       margin-right: map-get($map: $margins, $key: descriptions_box_sides);
       margin-top: map-get($map: $margins, $key: descriptions_box_top_bottom);
@@ -299,7 +299,7 @@ main {
       flex-direction: column;
       position: relative;
       z-index: -10;
-      top: -150vh;
+      //top: -150vh;
 
       .left {
         display: flex;

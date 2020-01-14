@@ -290,8 +290,8 @@ main .projects .content {
           align-items: center;
   text-align: justify;
   position: relative;
-  -webkit-transform: translateY(-100px);
-          transform: translateY(-100px);
+  -webkit-transform: translateY(-1700px);
+          transform: translateY(-1700px);
   margin-left: 20vw;
   margin-right: 20vw;
   margin-top: 130px;
@@ -337,7 +337,6 @@ main .projects .back-ground {
           flex-direction: column;
   position: relative;
   z-index: -10;
-  top: -150vh;
 }
 
 main .projects .back-ground .left {
