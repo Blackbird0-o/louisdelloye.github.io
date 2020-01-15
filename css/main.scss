@@ -330,14 +330,13 @@ main {
       .left {
         display: flex;
         justify-content: flex-start;
-        margin-bottom: map-get($margins, svg_projects_bg);
+        padding-left: map-get($margins, svg_projects_bg);
       }
 
       .right {
         display: flex;
         justify-content: flex-end;
-        margin-bottom: map-get($margins, svg_projects_bg);
-        margin-top: map-get($margins, svg_projects_bg);
+        padding-right: map-get($margins, svg_projects_bg);
       }
     }
   }

@@ -368,7 +368,7 @@ main .projects .back-ground .left {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin-bottom: 0px;
+  padding-left: 60px;
 }
 
 main .projects .back-ground .right {
@@ -378,8 +378,7 @@ main .projects .back-ground .right {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin-bottom: 0px;
-  margin-top: 0px;
+  padding-right: 60px;
 }
 
 footer {
