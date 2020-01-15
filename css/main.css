@@ -219,8 +219,8 @@ main {
 
 main h1 {
   font-weight: 200;
-  font-size: 5rem;
-  color: #2240E7;
+  font-size: 7rem;
+  color: #131313;
 }
 
 main h4,
@@ -229,9 +229,14 @@ main p {
   font-weight: 700;
 }
 
-main h4 {
-  -webkit-transform: translate(0, 1rem);
-          transform: translate(0, 1rem);
+main h4.intro {
+  -webkit-transform: translateY(2rem);
+          transform: translateY(2rem);
+}
+
+main p.intro {
+  -webkit-transform: translateY(-1.2rem);
+          transform: translateY(-1.2rem);
 }
 
 main .to-the-top #myBtnL,
@@ -363,7 +368,7 @@ main .projects .back-ground .left {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin-bottom: 100px;
+  margin-bottom: 0px;
 }
 
 main .projects .back-ground .right {
@@ -373,8 +378,8 @@ main .projects .back-ground .right {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin-bottom: 100px;
-  margin-top: 100px;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 footer {

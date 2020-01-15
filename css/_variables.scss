@@ -5,10 +5,17 @@ $colors: (primary: #EEEEEE,
   best_blue: #2240E7,
   accent_bl: #00C2FF,
   accent_or: #FFD12F,
-  accent_ro: #E52B50,
-);
+  accent_ro: #E52B50);
 
-$margins: (svg_projects_bg : 100px,
+$lightM_colors: (lightest_color: #45EBA5,
+  mid_color: #d6e4f0,
+  darkest_color: #2953B8);
+
+$darkM_colors: (lightest_color: #45EBA5,
+  mid_color: #21ABA5,
+  darkest_color: #1D566E);
+
+$margins: (svg_projects_bg : 0px,
   icons: 5px,
   footer_padding: 10px,
   descriptions_box_sides: 20vw,

@@ -47,6 +47,7 @@
   </header>
 
   <main>
+    <!-- * Scroll to top button light then dark version -->
     <div class="to-the-top light-button">
       <button onclick="topFunction()" id="myBtnL" title="Scroll to top">
         <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,7 +58,6 @@
         </svg>
       </button>
     </div>
-
     <div class="to-the-top dark-button">
       <button onclick="topFunction()" id="myBtnD" title="Scroll to top">
         <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -74,29 +74,29 @@
     <div class="home">
       <div class="boxing">
         <div class="summary">
-          <h4>Hi,</h4>
+          <h4 class="intro">Hi,</h4>
           <h1>I'm Louis</h1>
-          <p>First year Physics Master student, also passionate about photography and UI/UX</p>
+          <p class="intro">First year Physics Master student, also passionate about photography and UI/UX</p>
         </div>
       </div>
 
       <svg width="1012" height="997" viewBox="0 0 1012 997" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="397.5" cy="63.5" r="63.5" fill="#FFF500" />
-        <circle cx="564.5" cy="63.5" r="63.5" fill="#00C2FF" />
-        <circle cx="731.5" cy="63.5" r="63.5" fill="#FFF500" />
-        <circle cx="898.5" cy="63.5" r="63.5" fill="#3DEE4F" />
-        <circle cx="397.5" cy="227.5" r="63.5" fill="#00C2FF" />
-        <circle cx="564.5" cy="227.5" r="63.5" fill="#3DEE4F" />
-        <circle cx="63.5" cy="227.5" r="63.5" fill="#00C2FF" />
-        <circle cx="230.5" cy="227.5" r="63.5" fill="#3DEE4F" />
-        <circle cx="731.5" cy="227.5" r="63.5" fill="#FFF500" />
-        <circle cx="898.5" cy="227.5" r="63.5" fill="#00C2FF" />
-        <circle cx="898.5" cy="391.5" r="63.5" fill="#3DEE4F" />
-        <circle cx="898.5" cy="555.5" r="63.5" fill="#00C2FF" />
-        <circle cx="731.5" cy="555.5" r="63.5" fill="#FFF500" />
-        <circle cx="731.5" cy="391.5" r="63.5" fill="#00C2FF" />
-        <circle cx="898.5" cy="883.5" r="63.5" fill="#3DEE4F" />
-        <circle cx="898.5" cy="719.5" r="63.5" fill="#FFF500" />
+        <circle class="lightest-color" cx="397.5" cy="63.5" r="63.5" fill="#45EBA5" />
+        <circle class="mid-color" cx="564.5" cy="63.5" r="63.5" fill="#d6e4f0" />
+        <circle class="lightest-color" cx="731.5" cy="63.5" r="63.5" fill="#45EBA5" />
+        <circle class="darkest-color" cx="898.5" cy="63.5" r="63.5" fill="#2953B8" />
+        <circle class="mid-color" cx="397.5" cy="227.5" r="63.5" fill="#d6e4f0" />
+        <circle class="darkest-color" cx="564.5" cy="227.5" r="63.5" fill="#2953B8" />
+        <circle class="mid-color" cx="63.5" cy="227.5" r="63.5" fill="#d6e4f0" />
+        <circle class="darkest-color" cx="230.5" cy="227.5" r="63.5" fill="#2953B8" />
+        <circle class="lightest-color" cx="731.5" cy="227.5" r="63.5" fill="#45EBA5" />
+        <circle class="mid-color" cx="898.5" cy="227.5" r="63.5" fill="#d6e4f0" />
+        <circle class="darkest-color" cx="898.5" cy="391.5" r="63.5" fill="#2953B8" />
+        <circle class="mid-color" cx="898.5" cy="555.5" r="63.5" fill="#d6e4f0" />
+        <circle class="lightest-color" cx="731.5" cy="555.5" r="63.5" fill="#45EBA5" />
+        <circle class="mid-color" cx="731.5" cy="391.5" r="63.5" fill="#d6e4f0" />
+        <circle class="darkest-color" cx="898.5" cy="883.5" r="63.5" fill="#2953B8" />
+        <circle class="lightest-color" cx="898.5" cy="719.5" r="63.5" fill="#45EBA5" />
       </svg>
     </div>
 
@@ -109,26 +109,35 @@
       <!-- * SVG -->
       <div class="back-ground">
         <div class="left">
-          <svg id="green" width="549" height="701" viewBox="0 0 549 701" xmlns="http://www.w3.org/2000/svg">
-            <path
+          <svg id="fast" width="549" height="701" viewBox="0 0 549 701" xmlns="http://www.w3.org/2000/svg">
+            <path class="lightest-color"
               d="M0 87.2422V693.203L472.542 700.758C524.672 701.591 561.728 650.295 544.557 601.067L352.555 50.5947C339.174 12.2313 297.678 -8.50086 258.966 3.83587L10.4004 83.0492C6.80371 84.1955 3.33008 85.6005 0 87.2422Z"
-              fill="#3DEE4F" />
+              fill="#45EBA5" />
           </svg>
         </div>
 
         <div class="right">
-          <svg id="blue" width="504" height="676" viewBox="0 0 504 676" xmlns="http://www.w3.org/2000/svg">
-            <path
+          <svg id="faster" width="504" height="676" viewBox="0 0 504 676" xmlns="http://www.w3.org/2000/svg">
+            <path class="mid-color"
               d="M504 0.0197754L77.3891 6.99072C36.7645 7.65454 4.05581 40.5466 3.61879 81.1743L0.812947 342.041C0.535298 367.858 13.5562 392.003 35.2804 405.954L436.931 663.901C458.02 677.445 482.786 678.96 504 670.942V0.0197754Z"
-              fill="#00C2FF" />
+              fill="#d6e4f0" />
           </svg>
         </div>
 
-        <!-- <div class="left">
-          <svg id="yellow" width="608" height="762" viewBox="0 0 608 762" xmlns="http://www.w3.org/2000/svg">
-            <path
+        <div class="left">
+          <svg id="slowest" width="608" height="762" viewBox="0 0 608 762" xmlns="http://www.w3.org/2000/svg">
+            <path class="darkest-color"
               d="M16.958 740.091C35.4785 758.08 61.9492 765.278 87.0293 759.145L550.714 645.758C597.829 634.237 621.782 581.697 599.579 538.574L343.475 41.1451C319.608 -5.20895 256.897 -13.6721 221.598 24.6975L0 265.57V723.62L16.958 740.091Z"
-              fill="#FFF500" />
+              fill="#2953B8" />
+          </svg>
+        </div>
+
+        <!-- Just another frame with associated parallax effect inf needed-->
+        <!-- <div class="right">
+          <svg id="slower" width="504" height="676" viewBox="0 0 504 676" xmlns="http://www.w3.org/2000/svg">
+            <path class="mid-color"
+              d="M504 0.0197754L77.3891 6.99072C36.7645 7.65454 4.05581 40.5466 3.61879 81.1743L0.812947 342.041C0.535298 367.858 13.5562 392.003 35.2804 405.954L436.931 663.901C458.02 677.445 482.786 678.96 504 670.942V0.0197754Z"
+              fill="#d6e4f0" />
           </svg>
         </div> -->
       </div>

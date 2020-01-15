@@ -206,8 +206,9 @@ main {
 
   h1 {
     font-weight: 200;
-    font-size: 5rem;
-    color: map-get($map: $colors, $key: best_blue);
+    font-size: 7rem;
+    color: #131313;
+    //color: map-get($map: $lightM_colors, $key: lightest_color);
   }
 
   h4,
@@ -216,8 +217,12 @@ main {
     font-weight: 700;
   }
 
-  h4 {
-    transform: translate(0, 1rem);
+  h4.intro {
+    transform: translateY(2rem);
+  }
+
+  p.intro {
+    transform: translateY(-1.2rem);
   }
 
   .to-the-top {
