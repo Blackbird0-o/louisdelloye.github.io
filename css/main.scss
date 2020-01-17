@@ -368,8 +368,53 @@ footer {
   }
 }
 
+@media only screen and (max-width: 1268px) {
+  main {
+    .home {
+      overflow-x: hidden;
+
+      .boxing {
+        .summary {
+          top: 60vh;
+        }
+      }
+    }
+  }
+}
+
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
+@media only screen and (max-width: 920px) {
+  main {
+    .projects {
+      .content {
+        margin-left: 15vw;
+        margin-right: 15vw;
+      }
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  main {
+    .home {
+      .boxing {
+        .summary {
+          left: 100px;
+          top: 60vh;
+
+          .intro {
+            font-size: 0.8rem;
+          }
+
+          h4.intro {
+            transform: translateY(1.6rem);
+          }
+        }
+      }
+    }
+  }
+}
 
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -456,11 +501,15 @@ footer {
     .home {
       svg {
         height: 840px;
+
+        .small-device {
+          display: block;
+        }
       }
 
       .boxing {
         .summary {
-          left: 20px;
+          left: 25px;
         }
       }
     }
@@ -486,9 +535,21 @@ footer {
     .home {
       svg {
         height: 700px;
+      }
+    }
 
-        .small-device {
-          display: block;
+    .projects {
+      .back-ground {
+        .left {
+          padding-left: 20px;
+        }
+
+        .right {
+          padding-right: 20px;
+
+          svg.faster {
+            transform: translateX(300px);
+          }
         }
       }
     }
@@ -508,5 +569,7 @@ footer {
 
 
 
-//TODO Add media queries for table phone and smaller (width and size !) computer screen
-//TODO Fix hover properties broken when using on mobile
+
+// TODO Fix hover properties broken when using on mobile
+
+// TODO Media queries for landscape mode
