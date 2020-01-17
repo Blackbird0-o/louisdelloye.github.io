@@ -548,7 +548,7 @@ footer {
           padding-right: 20px;
 
           svg.faster {
-            transform: translateX(300px);
+            transform: translateX(300px); // ! NOT WORKING ??
           }
         }
       }
@@ -573,3 +573,5 @@ footer {
 // TODO Fix hover properties broken when using on mobile
 
 // TODO Media queries for landscape mode
+
+// TODO maybe the reason why there's overlapping shapes is the size of view box of svgs ?
