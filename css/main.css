@@ -223,8 +223,7 @@ main h1 {
   color: #131313;
 }
 
-main h4,
-main p {
+main .intro {
   padding-left: 0.45rem;
   font-weight: 700;
 }
@@ -270,6 +269,10 @@ main .home svg {
 
 main .home svg circle:hover {
   fill: #E52B50;
+}
+
+main .home .phone {
+  display: none;
 }
 
 main .home .boxing {
@@ -348,6 +351,14 @@ main .projects .content .descr {
   margin: 20px;
 }
 
+main .projects .content p {
+  font-weight: normal;
+}
+
+main .projects .content p bold {
+  font-weight: bold;
+}
+
 main .projects .back-ground {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -406,7 +417,98 @@ footer .profile-links .profile-svg {
   margin: 5px;
 }
 
-/* Extra small devices (phones, 600px and down) */
-/* Small devices (portrait tablets and large phones, 600px and up) */
 /* Medium devices (landscape tablets, 768px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 630px) {
+  header .temp-sign h2 {
+    position: relative;
+    top: 4px;
+    font-size: 12px;
+  }
+  main h1 {
+    font-size: 5rem;
+  }
+  main .home .desktop {
+    display: none;
+  }
+  main .home .phone {
+    display: inline-block;
+  }
+  main .home .boxing {
+    max-height: 100px;
+  }
+  main .home .boxing .summary {
+    left: 70px;
+    top: 60vh;
+  }
+  main .home .boxing .summary .intro {
+    font-size: 0.8rem;
+  }
+  main .home .boxing .summary h4.intro {
+    -webkit-transform: translateY(1.6rem);
+            transform: translateY(1.6rem);
+  }
+  main .home svg {
+    left: 0;
+    width: 100vw;
+    height: 1000px;
+  }
+  main .home svg .small-device {
+    display: none;
+  }
+  main .projects .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 90px;
+    margin-bottom: 90px;
+  }
+  main .projects .content .preview .img-cropper {
+    height: 200px;
+    width: 200px;
+  }
+  main .projects .content .descr {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 530px) {
+  main .home svg {
+    height: 840px;
+  }
+  main .home .boxing .summary {
+    left: 20px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  main .to-the-top #myBtnD,
+  main .to-the-top #myBtnL {
+    bottom: 10px;
+    right: 15px;
+  }
+  main .to-the-top #myBtnD svg,
+  main .to-the-top #myBtnL svg {
+    width: 40px;
+    height: 40px;
+  }
+  main .home svg {
+    height: 700px;
+  }
+  main .home svg .small-device {
+    display: block;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 375px) {
+  main .home svg {
+    height: 595px;
+  }
+}
 /*# sourceMappingURL=main.css.map */

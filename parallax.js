@@ -39,7 +39,7 @@ function parallax(element, distance, speed) {
 // Vary speed based on scroll
 window.addEventListener('scroll', function () {
   parallax('#fast', window.scrollY, -0.3);
-  parallax('#slowest', window.scrollY, 0.3);
+  parallax('#slowest', window.scrollY, 0.33);
   parallax('#faster', window.scrollY, -0.4);
   //parallax('#slower', window.scrollY, -0.5);
 });
