@@ -45,7 +45,6 @@ header {
     height: 50px;
     box-sizing: border-box;
     align-items: center;
-    //background-color: red;
 
     .toggle {
       position: absolute;
@@ -105,7 +104,6 @@ header {
         top: 10px;
       }
     }
-
 
     .toggle:hover+.hamburger {
       transform: rotate(-25deg);
@@ -315,7 +313,6 @@ main {
         flex: 1;
         position: relative;
         margin: map-get($map: $margins, $key: descr);
-
       }
     }
 
@@ -325,7 +322,6 @@ main {
       position: relative;
       z-index: -10;
       max-height: 0px;
-      //top: -150vh;
 
       .left {
         display: flex;
@@ -361,6 +357,15 @@ footer {
     }
   }
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 992px) {}
 
 //TODO Add media queries for table phone and smaller (width and size !) computer screen
 //TODO Fix hover properties broken when using on mobile

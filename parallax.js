@@ -1,7 +1,7 @@
 /*
  Takes care of the button that appears to scroll back to the top
  */
-//Get the button:
+// Get the button:
 mybuttonL = document.getElementById("myBtnL");
 mybuttonD = document.getElementById("myBtnD");
 
@@ -39,9 +39,9 @@ function parallax(element, distance, speed) {
 // Vary speed based on scroll
 window.addEventListener('scroll', function () {
   parallax('#fast', window.scrollY, -0.3);
-  //parallax('#slower', window.scrollY, 0.1);
-  parallax('#faster', window.scrollY, -0.3);
-  parallax('#slowest', window.scrollY, -0.2);
+  parallax('#slowest', window.scrollY, 0.3);
+  parallax('#faster', window.scrollY, -0.4);
+  //parallax('#slower', window.scrollY, -0.5);
 });
 
 // TODO : Add scroll change to right part when click in menu
