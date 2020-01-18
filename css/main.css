@@ -455,7 +455,7 @@ footer .profile-links .profile-svg {
   }
 }
 
-@media only screen and (max-height: 920px) and (orientation: landscape) {
+@media only screen and (max-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
   main .home .boxing {
     max-height: 100px;
   }
