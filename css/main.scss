@@ -105,18 +105,10 @@ header {
       }
     }
 
-    .toggle:hover+.hamburger {
-      transform: rotate(-25deg);
-      border-radius: 50%;
-    }
-
     .toggle:checked+.hamburger {
-      transform: rotate(45deg);
-    }
-
-    .toggle:checked:hover+.hamburger {
       transform: rotate(135deg);
     }
+
 
     .toggle:checked+.hamburger .bar::before,
     .toggle:checked+.hamburger .bar::after {
@@ -169,12 +161,12 @@ header {
       text-decoration: none;
       font-weight: 800;
       letter-spacing: 0.15rem;
-      font-size: 6rem; // TODO mediaQ
+      font-size: 6rem;
       cursor: pointer;
     }
 
     #contact {
-      color: map-get($map: $colors, $key: best_blue);
+      color: map-get($map: $lightM_colors, $key: lightest_color);
     }
   }
 
@@ -254,7 +246,8 @@ main {
       }
     }
 
-    .phone {
+    .phone,
+    .phone-landscape {
       display: none;
     }
 
@@ -268,7 +261,7 @@ main {
         width: fit-content;
         position: relative;
         top: 70vh;
-        left: 200px;
+        left: 300px;
       }
     }
   }
@@ -368,6 +361,31 @@ footer {
   }
 }
 
+
+
+
+
+//------------MEDIA QUERIES------------
+
+@media (hover: hover) {
+  header {
+    .menu-wrapper {
+      .toggle:hover+.hamburger {
+        transform: rotate(-25deg);
+        border-radius: 50%;
+      }
+
+      .toggle:checked+.hamburger {
+        transform: rotate(45deg);
+      }
+
+      .toggle:checked:hover+.hamburger {
+        transform: rotate(135deg);
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 1268px) {
   main {
     .home {
@@ -382,6 +400,36 @@ footer {
   }
 }
 
+@media only screen and (max-width: 1024px) {
+  main {
+    .home {
+
+      svg {
+        left: 5vw
+      }
+
+      .boxing {
+        .summary {
+          top: 40vh;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: landscape) {
+  main {
+    .home {
+      .boxing {
+        .summary {
+          top: 65vh;
+        }
+      }
+    }
+  }
+}
+
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 920px) {
   main {
@@ -394,8 +442,44 @@ footer {
   }
 }
 
+@media only screen and (max-height: 920px) and (orientation: landscape) {
+  main {
+    .home {
+      .boxing {
+        max-height: 100px;
+
+        .summary {
+          top: 40vh;
+          left: 150px;
+        }
+      }
+
+      svg {
+        left: -80px;
+      }
+
+      .desktop,
+      .phone {
+        display: none;
+      }
+
+      .phone-landscape {
+        display: block;
+      }
+    }
+  }
+}
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
+  header {
+    nav {
+      .nav-link {
+        font-size: 5rem;
+      }
+    }
+  }
+
   main {
     .home {
       .boxing {
@@ -416,7 +500,6 @@ footer {
   }
 }
 
-
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 630px) {
   header {
@@ -425,6 +508,12 @@ footer {
         position: relative;
         top: 4px;
         font-size: 12px;
+      }
+    }
+
+    nav {
+      .nav-link {
+        font-size: 4rem;
       }
     }
   }
@@ -497,6 +586,14 @@ footer {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 530px) {
+  header {
+    nav {
+      .nav-link {
+        font-size: 3.5rem;
+      }
+    }
+  }
+
   main {
     .home {
       svg {
@@ -517,6 +614,14 @@ footer {
 }
 
 @media only screen and (max-width: 450px) {
+  header {
+    nav {
+      .nav-link {
+        font-size: 3rem;
+      }
+    }
+  }
+
   main {
     .to-the-top {
 
@@ -556,9 +661,55 @@ footer {
   }
 }
 
+@media only screen and (max-height: 450px) and (orientation: landscape) {
+  main {
+    .home {
+      .boxing {
+        max-height: 60px;
+
+        .summary {
+          top: 35vh;
+        }
+      }
+
+      svg {
+        max-width: 120vw;
+        max-height: 300px;
+      }
+
+      .phone {
+        display: none;
+      }
+    }
+  }
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 375px) {
   main {
+    h1 {
+      font-size: 4rem;
+    }
+
+    .home {
+      .boxing {
+        .summary {
+          .intro {
+            padding-left: 0.3rem;
+            font-size: 0.6rem;
+          }
+
+          h4.intro {
+            transform: translateY(1.2rem);
+          }
+
+          p.intro {
+            transform: translateY(-0.9rem);
+          }
+        }
+      }
+    }
+
     .home {
       svg {
         height: 595px;

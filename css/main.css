@@ -112,18 +112,7 @@ header .menu-wrapper .hamburger .bar::after {
   top: 10px;
 }
 
-header .menu-wrapper .toggle:hover + .hamburger {
-  -webkit-transform: rotate(-25deg);
-          transform: rotate(-25deg);
-  border-radius: 50%;
-}
-
 header .menu-wrapper .toggle:checked + .hamburger {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-header .menu-wrapper .toggle:checked:hover + .hamburger {
   -webkit-transform: rotate(135deg);
           transform: rotate(135deg);
 }
@@ -185,7 +174,7 @@ header nav .nav-link {
 }
 
 header nav #contact {
-  color: #2240E7;
+  color: #45EBA5;
 }
 
 header .select-mode {
@@ -271,7 +260,8 @@ main .home svg circle:hover {
   fill: #E52B50;
 }
 
-main .home .phone {
+main .home .phone,
+main .home .phone-landscape {
   display: none;
 }
 
@@ -289,7 +279,7 @@ main .home .boxing .summary {
   width: fit-content;
   position: relative;
   top: 70vh;
-  left: 200px;
+  left: 300px;
 }
 
 main .about {
@@ -417,12 +407,43 @@ footer .profile-links .profile-svg {
   margin: 5px;
 }
 
+@media (hover: hover) {
+  header .menu-wrapper .toggle:hover + .hamburger {
+    -webkit-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+    border-radius: 50%;
+  }
+  header .menu-wrapper .toggle:checked + .hamburger {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  header .menu-wrapper .toggle:checked:hover + .hamburger {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+}
+
 @media only screen and (max-width: 1268px) {
   main .home {
     overflow-x: hidden;
   }
   main .home .boxing .summary {
     top: 60vh;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  main .home svg {
+    left: 5vw;
+  }
+  main .home .boxing .summary {
+    top: 40vh;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: landscape) {
+  main .home .boxing .summary {
+    top: 65vh;
   }
 }
 
@@ -434,8 +455,31 @@ footer .profile-links .profile-svg {
   }
 }
 
+@media only screen and (max-height: 920px) and (orientation: landscape) {
+  main .home .boxing {
+    max-height: 100px;
+  }
+  main .home .boxing .summary {
+    top: 40vh;
+    left: 150px;
+  }
+  main .home svg {
+    left: -80px;
+  }
+  main .home .desktop,
+  main .home .phone {
+    display: none;
+  }
+  main .home .phone-landscape {
+    display: block;
+  }
+}
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
+  header nav .nav-link {
+    font-size: 5rem;
+  }
   main .home .boxing .summary {
     left: 100px;
     top: 60vh;
@@ -455,6 +499,9 @@ footer .profile-links .profile-svg {
     position: relative;
     top: 4px;
     font-size: 12px;
+  }
+  header nav .nav-link {
+    font-size: 4rem;
   }
   main h1 {
     font-size: 5rem;
@@ -509,6 +556,9 @@ footer .profile-links .profile-svg {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 530px) {
+  header nav .nav-link {
+    font-size: 3.5rem;
+  }
   main .home svg {
     height: 840px;
   }
@@ -521,6 +571,9 @@ footer .profile-links .profile-svg {
 }
 
 @media only screen and (max-width: 450px) {
+  header nav .nav-link {
+    font-size: 3rem;
+  }
   main .to-the-top #myBtnD,
   main .to-the-top #myBtnL {
     bottom: 10px;
@@ -546,8 +599,39 @@ footer .profile-links .profile-svg {
   }
 }
 
+@media only screen and (max-height: 450px) and (orientation: landscape) {
+  main .home .boxing {
+    max-height: 60px;
+  }
+  main .home .boxing .summary {
+    top: 35vh;
+  }
+  main .home svg {
+    max-width: 120vw;
+    max-height: 300px;
+  }
+  main .home .phone {
+    display: none;
+  }
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 375px) {
+  main h1 {
+    font-size: 4rem;
+  }
+  main .home .boxing .summary .intro {
+    padding-left: 0.3rem;
+    font-size: 0.6rem;
+  }
+  main .home .boxing .summary h4.intro {
+    -webkit-transform: translateY(1.2rem);
+            transform: translateY(1.2rem);
+  }
+  main .home .boxing .summary p.intro {
+    -webkit-transform: translateY(-0.9rem);
+            transform: translateY(-0.9rem);
+  }
   main .home svg {
     height: 595px;
   }
