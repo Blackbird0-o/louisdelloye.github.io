@@ -240,10 +240,6 @@ main {
     svg {
       position: relative;
       left: 20vw;
-
-      circle:hover {
-        fill: #E52B50;
-      }
     }
 
     .phone,
@@ -272,7 +268,7 @@ main {
     margin-left: 30px;
     margin-top: 100px;
     margin-bottom: -20px;
-    font-weight: 400;
+    font-weight: 200;
   }
 
   h1#projects {
@@ -295,7 +291,9 @@ main {
         max-width: 40vh;
         max-height: 40vh;
         border-radius: 50%;
+        border: 8px solid white;
         margin: map-get($map: $margins, $key: my_face);
+
         // box-shadow: 20px -20px 70px 0px rgba(0, 0, 0, 0.15); //offset x, y, blur, size, color
       }
     }
@@ -310,11 +308,11 @@ main {
       color: rgb(238, 120, 10);
       background-color: red($color: #000000);
 
-      &&:hover {
+      &:hover {
         color: map-get($map: $colors, $key: best_blue)
       }
 
-      &&:visited {
+      &:visited {
         color: map-get($map: $colors, $key: accent_or)
       }
     }

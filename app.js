@@ -42,8 +42,8 @@ function animation() {
       color: toggle ? "#252525" : "#EEEEEE"
     }, "-=700")
     .add({
-      targets: "#contact",
-      color: toggle ? "#2240E7" : "#E52B50"
+      targets: "#project",
+      color: toggle ? "#45EBA5" : "#E52B50"
     }, "-=700")
     .add({
       targets: ".profile-svg",

@@ -57,7 +57,7 @@ nav_links = document.querySelectorAll(".nav-link")
 for (var i = 0; i < nav_links.length; i++) {
   nav_links[i].addEventListener("click", () => {
     document.getElementById('hamb-btn').click(); // collapses the nav menu
-    // ? window.scroll(0, 0); 
+    window.scroll(0, 0);
 
     // document.querySelector('a[href*=#]').addEventListener('click', function (e) {
     //   e.preventDefault(); // prevent hard jump, the default behavior

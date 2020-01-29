@@ -173,7 +173,7 @@ header nav .nav-link {
   cursor: pointer;
 }
 
-header nav #contact {
+header nav #project {
   color: #45EBA5;
 }
 
@@ -256,10 +256,6 @@ main .home svg {
   left: 20vw;
 }
 
-main .home svg circle:hover {
-  fill: #E52B50;
-}
-
 main .home .phone,
 main .home .phone-landscape {
   display: none;
@@ -287,7 +283,7 @@ main h1.title {
   margin-left: 30px;
   margin-top: 100px;
   margin-bottom: -20px;
-  font-weight: 400;
+  font-weight: 200;
 }
 
 main h1#projects {
@@ -322,6 +318,7 @@ main .about .da-me #me {
   max-width: 40vh;
   max-height: 40vh;
   border-radius: 50%;
+  border: 8px solid white;
   margin: 30px;
 }
 
@@ -330,14 +327,18 @@ main .about p {
   text-align: justify;
 }
 
-main .about a#CV,
-main .about a#CV:link,
-main .about a#CV:visited,
-main .about a#CV:hover,
-main .about a#CV:active {
+main .about a#CV {
   text-decoration: none;
   color: #ee780a;
   background-color: 0;
+}
+
+main .about a#CV:hover {
+  color: #2240E7;
+}
+
+main .about a#CV:visited {
+  color: #FFD12F;
 }
 
 .projects {
