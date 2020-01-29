@@ -1,5 +1,5 @@
 /*
- Takes care of the button that appears to scroll back to the top
+ * Takes care of the button that appears to scroll back to the top
  */
 // Get the button:
 mybuttonL = document.getElementById("myBtnL");
@@ -27,7 +27,7 @@ function topFunction() {
 
 
 /*
- Takes care of the parallax effect
+ * Takes care of the parallax effect
  */
 // Function that will change the scrolling speed of a specific element
 function parallax(element, distance, speed) {
@@ -38,10 +38,12 @@ function parallax(element, distance, speed) {
 
 // Vary speed based on scroll
 window.addEventListener('scroll', function () {
-  parallax('#fast', window.scrollY, -0.3);
-  parallax('#slowest', window.scrollY, 0.33);
-  parallax('#faster', window.scrollY, -0.4);
+  parallax('#fast', window.scrollY - 700, -0.3); // - 700 is here to compensate for all the stuff before one arrives at the projects section
+  parallax('#slowest', window.scrollY - 700, 0.33);
+  parallax('#faster', window.scrollY - 700, -0.4);
+  //console.log(window.scrollY);
   //parallax('#slower', window.scrollY, -0.5);
 });
 
 // TODO : Add scroll change to right part when click in menu
+//if (typeof window.orientation !== 'undefined') { ... }
