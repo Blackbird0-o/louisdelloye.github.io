@@ -271,10 +271,6 @@ main {
     font-weight: 200;
   }
 
-  h1#projects {
-    margin-bottom: -80px;
-  }
-
   .about {
     flex: 1;
     display: flex;
@@ -322,6 +318,7 @@ main {
 .projects {
   position: relative;
   flex: 1;
+  margin-top: -80px;
 
   .content {
     display: flex;
@@ -630,7 +627,7 @@ footer {
         margin-left: 10vw;
         margin-right: 10vw;
         margin-top: 90px;
-        margin-bottom: 90px;
+        margin-bottom: 180px;
 
         .preview {
           .img-cropper {

@@ -286,10 +286,6 @@ main h1.title {
   font-weight: 200;
 }
 
-main h1#projects {
-  margin-bottom: -80px;
-}
-
 main .about {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -346,6 +342,7 @@ main .about a#CV:visited {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  margin-top: -80px;
 }
 
 .projects .content {
@@ -608,7 +605,7 @@ footer .profile-links .profile-svg {
     margin-left: 10vw;
     margin-right: 10vw;
     margin-top: 90px;
-    margin-bottom: 90px;
+    margin-bottom: 180px;
   }
   main .projects .content .preview .img-cropper {
     height: 200px;
