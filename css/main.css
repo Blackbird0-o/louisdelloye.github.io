@@ -597,6 +597,9 @@ footer .profile-links .profile-svg {
   main .home svg .small-device {
     display: none;
   }
+  main .projects {
+    margin-top: 20px;
+  }
   main .projects .content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -605,7 +608,7 @@ footer .profile-links .profile-svg {
     margin-left: 10vw;
     margin-right: 10vw;
     margin-top: 90px;
-    margin-bottom: 180px;
+    margin-bottom: 90px;
   }
   main .projects .content .preview .img-cropper {
     height: 200px;

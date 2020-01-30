@@ -622,12 +622,14 @@ footer {
     }
 
     .projects {
+      margin-top: 20px;
+
       .content {
         flex-direction: column;
         margin-left: 10vw;
         margin-right: 10vw;
         margin-top: 90px;
-        margin-bottom: 180px;
+        margin-bottom: 90px;
 
         .preview {
           .img-cropper {
