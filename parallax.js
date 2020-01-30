@@ -21,8 +21,13 @@ function scrollFunction(myb) {
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  scrollIt(
+    document.querySelector('body'),
+    500,
+    'easeOutQuad', offset = false
+  );
+  //   document.body.scrollTop = 0; // For Safari
+  //   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
 
@@ -51,7 +56,7 @@ window.addEventListener('scroll', function () {
  */
 
 // Define smooth scroll function
-function scrollIt(destination, duration = 200, easing = 'linear', callback) {
+function scrollIt(destination, duration = 200, easing = 'linear', offset = true, callback) {
 
   const easings = {
     linear(t) {
@@ -100,7 +105,11 @@ function scrollIt(destination, duration = 200, easing = 'linear', callback) {
 
   const documentHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
   const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
-  const destinationOffset = typeof destination === 'number' ? destination : destination.offsetTop - 100;
+  if (offset == true) {
+    var destinationOffset = typeof destination === 'number' ? destination : destination.offsetTop - 100;
+  } else {
+    var destinationOffset = typeof destination === 'number' ? destination : destination.offsetTop;
+  }
   const destinationOffsetToScroll = Math.round(documentHeight - destinationOffset < windowHeight ? documentHeight - windowHeight : destinationOffset);
 
   if ('requestAnimationFrame' in window === false) {
@@ -131,47 +140,45 @@ function scrollIt(destination, duration = 200, easing = 'linear', callback) {
 }
 
 // Select all nav-links
-nav_links = document.querySelectorAll(".nav-link")
+//ABOUT ME
+document.querySelector('#bout-me').addEventListener('click', function () {
+  // Collapse nav menu
+  document.getElementById('hamb-btn').click();
 
-// Add click event listener
-for (var i = 0; i < nav_links.length; i++) {
-  nav_link = nav_links[i];
-  nav_link.addEventListener("click", () => {
+  // Smooth scroll to element
+  scrollIt(
+    document.querySelector('#about'),
+    500,
+    'easeOutQuad'
+  );
+});
 
-    // Collapse nav menu
-    document.getElementById('hamb-btn').click();
+//PROJECTS
+document.querySelector('#project').addEventListener('click', function () {
+  // Collapse nav menu
+  document.getElementById('hamb-btn').click();
 
-    // Smooth scroll to element
-    scrollIt(
-      document.querySelector('#projects'),
-      300,
-      'easeOutQuad',
-      () => console.log(`Just finished scrolling to ${window.pageYOffset}px`)
-    );
+  // Smooth scroll to element
+  scrollIt(
+    document.querySelector('#projects'),
+    1000,
+    'easeOutQuad'
+  );
+});
 
+//CONTACT
+document.querySelector('#contact').addEventListener('click', function () {
+  // Collapse nav menu
+  document.getElementById('hamb-btn').click();
 
-    // document.querySelector('a[href*=#]').addEventListener('click', function (e) {
-    //   e.preventDefault(); // prevent hard jump, the default behavior
-
-    //   document.getElementById("#projects").scrollIntoView();
-
-    //   // var target = this.attr("href"); // Set the target as variable
-
-    //   // // perform animated scrolling by getting top-position of target-element and set it as scroll target
-    //   // document.querySelector('html, body').stop().animate({
-    //   //   scrollTop: $(target).offset().top
-    //   // }, 600, function () {
-
-    //   //   location.hash = target; //attach the hash (#jumptarget) to the pageurl
-    //   // });
-
-    //   return false;
-    // });
-
-  });
-}
-
+  // Smooth scroll to element
+  scrollIt(
+    document.querySelector('#contact-section'),
+    1000,
+    'easeOutQuad'
+  );
+});
 
 
-// TODO : Add scroll change to right part when click in menu
-//if (typeof window.orientation !== 'undefined') { ... }
+// TODO if (typeof window.orientation !== 'undefined') { ... }
+// TODO add contact section
