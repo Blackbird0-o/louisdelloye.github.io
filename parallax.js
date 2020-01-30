@@ -161,7 +161,7 @@ document.querySelector('#project').addEventListener('click', function () {
   // Smooth scroll to element
   scrollIt(
     document.querySelector('#projects'),
-    1000,
+    500,
     'easeOutQuad'
   );
 });
@@ -174,7 +174,7 @@ document.querySelector('#contact').addEventListener('click', function () {
   // Smooth scroll to element
   scrollIt(
     document.querySelector('#contact-section'),
-    1000,
+    500,
     'easeOutQuad'
   );
 });
