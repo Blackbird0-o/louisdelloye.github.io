@@ -42,7 +42,7 @@ function animation() {
       color: toggle ? "#252525" : "#EEEEEE"
     }, "-=700")
     .add({
-      targets: "#project",
+      targets: "#contact",
       color: toggle ? "#45EBA5" : "#E52B50"
     }, "-=700")
     .add({
