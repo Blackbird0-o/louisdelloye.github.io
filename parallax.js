@@ -180,5 +180,6 @@ document.querySelector('#contact').addEventListener('click', function () {
 });
 
 
-// TODO if (typeof window.orientation !== 'undefined') { ... }
 // TODO add contact section
+// TODO reupload svg forms ?
+// TODO responsive landscape on X my face is small as f

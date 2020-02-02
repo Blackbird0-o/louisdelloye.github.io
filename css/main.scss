@@ -296,7 +296,7 @@ main {
 
     p {
       margin: map-get($map: $margins, $key: about_me);
-      text-align: justify;
+      //text-align: justify;
     }
 
     a#CV {
@@ -313,48 +313,84 @@ main {
       }
     }
   }
-}
 
-.projects {
-  position: relative;
-  flex: 1;
-  margin-top: -80px;
-
-  .content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: justify;
+  .projects {
     position: relative;
-    margin-left: map-get($map: $margins, $key: descriptions_box_sides);
-    margin-right: map-get($map: $margins, $key: descriptions_box_sides);
-    margin-top: map-get($map: $margins, $key: descriptions_box_top_bottom);
-    margin-bottom: map-get($map: $margins, $key: descriptions_box_top_bottom);
+    flex: 1;
+    margin-top: -80px;
+    margin-bottom: -40px;
 
-    .preview {
-      flex: 0.2;
+    .content {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      //text-align: justify;
+      position: relative;
+      margin-left: map-get($map: $margins, $key: descriptions_box_sides);
+      margin-right: map-get($map: $margins, $key: descriptions_box_sides);
+      margin-top: map-get($map: $margins, $key: descriptions_box_top_bottom);
+      margin-bottom: map-get($map: $margins, $key: descriptions_box_top_bottom);
 
-      .img-cropper {
-        width: 250px;
-        height: 250px;
+      .preview {
+        flex: 0.2;
+
+        .img-cropper {
+          width: 250px;
+          height: 250px;
+          position: relative;
+          overflow: hidden;
+          border-radius: 15px;
+          border: 3px solid white;
+
+          img {
+            margin: 0 auto;
+            height: 100%;
+            width: auto;
+          }
+        }
+      }
+
+      .descr {
+        flex: 1;
         position: relative;
-        overflow: hidden;
-        border-radius: 15px;
-        border: 3px solid white;
+        margin: map-get($map: $margins, $key: descr);
+      }
 
-        img {
-          margin: 0 auto;
-          height: 100%;
-          width: auto;
+      p {
+        font-weight: normal;
+
+        bold {
+          font-weight: bold;
         }
       }
     }
 
-    .descr {
-      flex: 1;
+    .back-ground {
+      display: flex;
+      flex-direction: column;
       position: relative;
-      margin: map-get($map: $margins, $key: descr);
+      z-index: -10;
+      max-height: 0px;
+
+      .left {
+        display: flex;
+        justify-content: flex-start;
+        padding-left: map-get($margins, svg_projects_bg);
+      }
+
+      .right {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: map-get($margins, svg_projects_bg);
+      }
     }
+  }
+
+  .contact {
+    display: flex;
+    //justify-content: space-around;
+    margin: 40px;
+    margin-left: 60px;
 
     p {
       font-weight: normal;
@@ -362,29 +398,25 @@ main {
       bold {
         font-weight: bold;
       }
-    }
-  }
 
-  .back-ground {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    z-index: -10;
-    max-height: 0px;
+      a {
+        text-decoration: none;
+        color: rgb(238, 120, 10);
+        background-color: red($color: #000000);
 
-    .left {
-      display: flex;
-      justify-content: flex-start;
-      padding-left: map-get($margins, svg_projects_bg);
+        &:hover {
+          color: map-get($map: $colors, $key: best_blue)
+        }
+
+        &:visited {
+          color: map-get($map: $colors, $key: accent_or)
+        }
+      }
     }
 
-    .right {
-      display: flex;
-      justify-content: flex-end;
-      padding-right: map-get($margins, svg_projects_bg);
-    }
   }
 }
+
 
 
 footer {
@@ -800,8 +832,6 @@ footer {
 
 
 
-// TODO Fix hover properties broken when using on mobile
 
-// TODO Media queries for landscape mode
 
-// TODO maybe the reason why there's overlapping shapes is the size of view box of svgs ?
+// TODO maybe the reason why there's overlapping shapes is the size of view box of svgs ? doesn't seem like it

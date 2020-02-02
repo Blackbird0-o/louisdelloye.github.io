@@ -320,7 +320,6 @@ main .about .da-me #me {
 
 main .about p {
   margin: 40px;
-  text-align: justify;
 }
 
 main .about a#CV {
@@ -337,15 +336,16 @@ main .about a#CV:visited {
   color: #FFD12F;
 }
 
-.projects {
+main .projects {
   position: relative;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   margin-top: -80px;
+  margin-bottom: -40px;
 }
 
-.projects .content {
+main .projects .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -354,7 +354,6 @@ main .about a#CV:visited {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: justify;
   position: relative;
   margin-left: 20vw;
   margin-right: 20vw;
@@ -362,13 +361,13 @@ main .about a#CV:visited {
   margin-bottom: 130px;
 }
 
-.projects .content .preview {
+main .projects .content .preview {
   -webkit-box-flex: 0.2;
       -ms-flex: 0.2;
           flex: 0.2;
 }
 
-.projects .content .preview .img-cropper {
+main .projects .content .preview .img-cropper {
   width: 250px;
   height: 250px;
   position: relative;
@@ -377,13 +376,13 @@ main .about a#CV:visited {
   border: 3px solid white;
 }
 
-.projects .content .preview .img-cropper img {
+main .projects .content .preview .img-cropper img {
   margin: 0 auto;
   height: 100%;
   width: auto;
 }
 
-.projects .content .descr {
+main .projects .content .descr {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -391,15 +390,15 @@ main .about a#CV:visited {
   margin: 20px;
 }
 
-.projects .content p {
+main .projects .content p {
   font-weight: normal;
 }
 
-.projects .content p bold {
+main .projects .content p bold {
   font-weight: bold;
 }
 
-.projects .back-ground {
+main .projects .back-ground {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -412,7 +411,7 @@ main .about a#CV:visited {
   max-height: 0px;
 }
 
-.projects .back-ground .left {
+main .projects .back-ground .left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -422,7 +421,7 @@ main .about a#CV:visited {
   padding-left: 60px;
 }
 
-.projects .back-ground .right {
+main .projects .back-ground .right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -430,6 +429,36 @@ main .about a#CV:visited {
       -ms-flex-pack: end;
           justify-content: flex-end;
   padding-right: 60px;
+}
+
+main .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 40px;
+  margin-left: 60px;
+}
+
+main .contact p {
+  font-weight: normal;
+}
+
+main .contact p bold {
+  font-weight: bold;
+}
+
+main .contact p a {
+  text-decoration: none;
+  color: #ee780a;
+  background-color: 0;
+}
+
+main .contact p a:hover {
+  color: #2240E7;
+}
+
+main .contact p a:visited {
+  color: #FFD12F;
 }
 
 footer {
