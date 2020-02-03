@@ -180,6 +180,5 @@ document.querySelector('#contact').addEventListener('click', function () {
 });
 
 
-// TODO add contact section
-// TODO reupload svg forms ?
-// TODO responsive landscape on X my face is small as f
+// ? DONE reupload svg forms ? 
+// TODO responsive landscape on X my face is small as f and hi and subtitle small as f
