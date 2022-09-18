@@ -367,7 +367,7 @@ main .projects .content .preview {
           flex: 0.2;
 }
 
-main .projects .content .preview .img-cropper {
+main .projects .content .preview .img-cropper, main .projects .content .preview .ig {
   width: 250px;
   height: 250px;
   position: relative;
@@ -376,10 +376,19 @@ main .projects .content .preview .img-cropper {
   border: 3px solid white;
 }
 
-main .projects .content .preview .img-cropper img {
+main .projects .content .preview .img-cropper img, main .projects .content .preview .ig img {
   margin: 0 auto;
   height: 100%;
   width: auto;
+}
+
+main .projects .content .preview .ig {
+  width: 175px;
+  margin: 5px;
+}
+
+main .projects .content .preview .ig img {
+  width: 100%;
 }
 
 main .projects .content .descr {
@@ -639,7 +648,7 @@ footer .profile-links .profile-svg {
     margin-top: 90px;
     margin-bottom: 90px;
   }
-  main .projects .content .preview .img-cropper {
+  main .projects .content .preview .img-cropper, main .projects .content .preview .ig {
     height: 200px;
     width: 200px;
   }
